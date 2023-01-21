@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<body style="font-family:arial, sans-serif">
+    <h1 style="background:lightblue;padding:10px">
+            Visuals and plots for hotels and flights
+    </h1>
+
+    <form action = "/products" method="post">
+        <button type = "submit" value="Access products"> Acceder aux produits</button>
+    </form>
+
+    <br>
+    
+    <p>Booking stats</p>
+    {% for i in range(booking_titles|length) %}
+    <h1><a href="{{url_for('chart_booking',chart_id=i+1)}}">{{booking_titles[i]}}</a></h1>
+    {% endfor %}
+
+    <p>Flight stats</p>
+
+    {% for i in range(flights_titles|length) %}
+    <h1><a href="{{url_for('chart_flights',chart_id=i+1)}}">{{flights_titles[i]}}</a></h1>
+    {% endfor %}
+
+
+    
+</body>
+</html>

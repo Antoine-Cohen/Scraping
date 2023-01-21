@@ -1,0 +1,14 @@
+prix : price_int
+score: score_float (note attribuée à l'hotel)
+nombre de reviews: n_reviews_float
+montant de la réduction de prix: discount_price
+pourcentage de la réduction de prix: discount_percentage
+type de propriété: property_type (hotel, guesthouse, appartements...)
+label du score: score_label (excellent, moyen...)
+
+Colonnes avec appliances_, facility... :
+à la base des listes de points forts et propriétés d'un hotel (Wifi gratuit, parking, piscine,...)
+colonnes one hot encodées
+
+EXCEPTION:
+appliances_size: Taille en m² (parfois NaN)   
