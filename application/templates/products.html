@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<body style="font-family:arial, sans-serif">
+    <h1 style="background:lightblue;padding:10px">
+        Trips
+    </h1>
+
+    <form action="{{url_for('show_products')}}" method="POST">
+        <select name = "sort">
+            <option value = "no filter">no filter</option>
+            <option value = "price">price</option>
+        </select>
+        <button type="submit">Apply filter</button>
+    </form>
+    
+
+    {% for i in range(n_values) %}
+
+        {% for k in dict_attributes.keys() %}
+        <h4>{{k}} : {{dict_attributes[k][i]}}</h4>
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+
+
+
+</body>
+</html>
